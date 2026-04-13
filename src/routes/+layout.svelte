@@ -1,17 +1,28 @@
 <script>
 	import '$lib/style.css'
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.svg'
+	import Header from '$lib/components/Header.svelte'
+	import Footer from '$lib/components/Footer.svelte'
 
-	let { children } = $props();
+	let { children } = $props()
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-<a href="/contact/">Contact</a>
+<div class="page-wrapper">
+	<Header></Header>
 
-{@render children()}
+	<main>{@render children()}</main>
+
+	<Footer></Footer>
+</div>
+
+<style>
+	.page-wrapper {
+		min-height: 100svh;
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+	}
+</style>

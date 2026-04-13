@@ -1,1 +1,5 @@
-<h1>Contact</h1>
+<script>
+	import PageTitle from '$lib/components/PageTitle.svelte'
+</script>
+
+<PageTitle title="Contact"></PageTitle>
