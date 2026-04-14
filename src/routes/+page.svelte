@@ -2,6 +2,11 @@
 	import PageTitle from '$lib/components/PageTitle.svelte'
 </script>
 
+<svelte:head>
+	<title>Home | Acme Corporation</title>
+	<meta name="description" content="This is the homepage of my great fake company. Learn more about what we do!">
+</svelte:head>
+
 <PageTitle title="Welcome to Acme Corporation"></PageTitle>
 
 <section>
@@ -34,7 +39,7 @@
 <aside class="resources">
 	<div class="outer">
 		<div class="inner">
-			<h3>Resources:</h3>
+			<h2>Resources:</h2>
 			<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 		</div>
 	</div>
@@ -49,5 +54,9 @@
 
 	.resources .inner {
 		border-top: 1px solid;
-	}	
+	}
+
+	.resources h2 {
+		font-size: 1.17rem;
+	}
 </style>

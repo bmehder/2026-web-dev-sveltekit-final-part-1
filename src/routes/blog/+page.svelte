@@ -5,6 +5,11 @@
 	let { data } = $props()
 </script>
 
+<svelte:head>
+	<title>Blog | Acme Corporation</title>
+	<meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officiis provident perspiciatis rem impedit maxime?">
+</svelte:head>
+
 <PageTitle title="Blog"></PageTitle>
 
 {#each data.posts as post}
@@ -12,7 +17,7 @@
 		<div class="outer">
 			<div class="inner">
 				<div class="content">
-					<a href="/blog/{post.slug}"><img src={post.meta.image} alt="" /></a>
+					<a href="/blog/{post.slug}"><img src="/{post.meta.image}" alt="" /></a>
 					<h3>
 						<a href="/blog/{post.slug}">{post.meta.title}</a>
 					</h3>

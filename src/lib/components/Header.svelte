@@ -39,11 +39,6 @@
 
   a {
     color: white;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
   }
 
   .logo {

@@ -2,6 +2,11 @@
 	import PageTitle from '$lib/components/PageTitle.svelte'
 </script>
 
+<svelte:head>
+	<title>About | Acme Corporation</title>
+	<meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed officiis provident perspiciatis rem impedit maxime?">
+</svelte:head>
+
 <PageTitle title="About"></PageTitle>
 
 <section>
